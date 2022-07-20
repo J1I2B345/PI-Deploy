@@ -34,7 +34,8 @@ module.exports = (sequelize) => {
       type: DataTypes.INTEGER
     },
     img: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
+      defaultValue: 'https://thumbs.gfycat.com/FairRectangularBlacklemur.webp'
     }
   },
   {
