@@ -192,7 +192,7 @@ export const CreatePokemon = () => {
 
 
             <h1>{!error ? null : <span>{error}</span>} </h1>      
-            <input type='submit' value='Enviar'/>
+            <input type='submit' value='Enviar' className={s.button}/>
                     </form>
     </div>
 }
