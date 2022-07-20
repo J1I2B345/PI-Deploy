@@ -20,7 +20,7 @@
     width: auto;
     height: min-content;
     padding: 1em;
-    border-radius: 5em;
+    border-radius: 1em;
 
 }
 
@@ -305,7 +305,6 @@
     }
     .img{
         width:auto;
-        border-radius: 1em;
     }
     .mobile1{
         margin-right: 0.5em;
