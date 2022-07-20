@@ -24,3 +24,12 @@
 .imgPokemon{
     height: 5em;
 }
+
+@media (max-width: 600px) {
+    .ul {
+        padding-left: 0px;
+    }
+    .li {
+      margin: 0px;
+    }
+    }

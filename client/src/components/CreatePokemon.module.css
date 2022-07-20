@@ -58,6 +58,12 @@
     padding: 0em;
 }
 
+@media (max-width: 600px) {
+    .img {
+      display: none;
+    }
+    }
+
 
 
 

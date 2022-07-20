@@ -284,3 +284,21 @@
     background-color: #3a0449;
     color: #fff
 }
+
+
+@media (max-width: 600px) {
+    .name{
+        letter-spacing: 0.5em;
+    }
+    .divstats1{
+        display:flex;
+
+    }
+    .divstatscontainer{
+        display:flex;
+        flex-direction: column;
+    }
+    .img{
+        width:auto
+    }
+    }

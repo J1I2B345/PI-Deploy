@@ -45,14 +45,19 @@ const PokemonDetailById = (props) => {
                 <img src={poke.img} alt={`Imagen de pokemon ${poke.name}`} className={s.img}/>
                 <div className={s.divstatsconteiner}>     
                     <div className={s.divstats1}> 
-                        <p className={s.inputs}>Id: {poke.id}</p>
-                        <p className={s.inputs}>Ataque: {poke.ataque}</p>
-                        <p className={s.inputs}>Vida: {poke.vida}</p>
-                        <p className={s.inputs}>Ataque: {poke.ataque}</p>
-                        <p className={s.inputs}>Defensa: {poke.defensa}</p>
-                        <p className={s.inputs}>Velocidad: {poke.velocidad}</p>
-                        <p className={s.inputs}>Altura: {poke.altura}</p>
-                        <p className={s.inputs}>Peso: {poke.peso}</p>
+                        <div className={s.mobile1}> 
+                            <p className={s.inputs}>Id: {poke.id}</p>
+                            <p className={s.inputs}>Ataque: {poke.ataque}</p>
+                            <p className={s.inputs}>Vida: {poke.vida}</p>
+                            <p className={s.inputs}>Ataque: {poke.ataque}</p>
+                        </div>
+                        
+                        <div className={s.mobile2}>
+                            <p className={s.inputs}>Defensa: {poke.defensa}</p>
+                            <p className={s.inputs}>Velocidad: {poke.velocidad}</p>
+                            <p className={s.inputs}>Altura: {poke.altura}</p>
+                            <p className={s.inputs}>Peso: {poke.peso}</p>
+                        </div>
                     </div>
                 </div>
             </div>
