@@ -17,9 +17,11 @@
 }
 
 .img{
-    width: 20em;
+    width: auto;
+    height: min-content;
     padding: 1em;
     border-radius: 5em;
+
 }
 
 .inputs{
