@@ -16,12 +16,13 @@ const PokemonDetailByName = () => {
 
     
 
-
+    console.log (poke)
     useEffect (
         ()=> {
         dispatch(getPokemonQuery(name))
-        if (poke.name == name) setLoading(false)
-        else setLoading(true)
+        if (poke.name == name || poke.error) {
+            setLoading(false)
+        } else setLoading(true)
         }, [poke]
     )
 
@@ -29,6 +30,10 @@ const PokemonDetailByName = () => {
     if (loading){
         return <img src={img} alt='loading'></img>
     } 
+    else if (poke.error){
+        return <h1> {poke.error}</h1>
+    }
+
     else {
     return (
         

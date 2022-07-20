@@ -43,6 +43,10 @@ export const getPokemonQuery = (query) => (dispatch) => {
         type: 'GET_POKEMON_QUERY',
         payload: data.data
     }))
+    .catch(data => dispatch({
+        type: 'GET_POKEMON_QUERY',
+        payload: data.response.data
+    }))
 }
 
 export function getTypes() {

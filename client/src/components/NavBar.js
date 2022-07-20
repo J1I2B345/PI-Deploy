@@ -8,12 +8,14 @@ export const NavBar =() =>{
     
     
     function handleEvent(input){
-        setSearch(input)}
+        setSearch(input.trim())
+    }
 
-
-    function clicked(searchValue){
-        getPokemonQuery(searchValue)
-        setSearch('')
+    function clicked(e){
+        if (search.length>3){
+        getPokemonQuery(search)
+        setSearch('')}
+        else {e.preventDefault(); console.log ('ingrese el nombre de un pokemon')}
     }
     
     return <div className={s.div}>
@@ -22,7 +24,7 @@ export const NavBar =() =>{
             <NavLink to='/home'> <li className={s.li}>Home</li> </NavLink> 
             <NavLink to='/createpokemon'> <li className={s.li}>Create Pokemon </li> </NavLink>
             <input placeholder='Ingrese nombre de pokemon' className={s.li} value={search} onChange= {e=> handleEvent(e.target.value)}/> 
-            <NavLink to={`/pokemon/Name?name=${search}`} className={s.li}> <button onClick={(e) => clicked(search)}> Buscar </button> </NavLink>
+            <NavLink to={`/pokemon/Name?name=${search}`} className={s.li}> <button onClick={(e) => clicked(e)}> Buscar </button> </NavLink>
         </ul>
     </div>
 }
