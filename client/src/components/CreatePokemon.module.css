@@ -1,0 +1,312 @@
+.container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img {
+    width: 20em;
+    padding: 1em;
+    border-radius: 2em;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+}
+
+
+.divLabel{
+    display:flex;
+    flex-direction: column;
+}
+
+.inputs {
+    background-color: rgba(255, 255, 255, 0.575);
+}
+
+.input{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    border: 0;
+    /* border-bottom: 1px solid black; */
+    text-align: center;
+}
+
+.input:focus{
+    outline: none;
+    border: 0;
+    border-bottom: 1px solid red;
+}
+
+.select{
+    border: 0;
+    
+    background-color: rgba(255, 255, 255, 0.575);
+}
+
+.select:focus{
+    outline: none;
+    border-bottom: 1px solid red;
+}
+
+.divTiposSeleccionados{
+    display:flex;
+    padding: 0em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.grass {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    
+    background-color: #67a30d;
+    color: #fff;
+}
+
+.poison{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #6d1186;
+    color: #fff
+}
+
+.fire{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #fd7d24;
+    color: #fff
+}
+
+.water {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #4592c4;
+    color: #fff
+}
+
+.bug{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #adff2f;
+    
+}
+
+.flying {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+}
+
+.normal{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #a4acaf
+}
+
+.ground{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+}
+
+.electric {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  
+
+    background-color: #eed535;
+}
+
+.fairy {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #fdb9e9
+}
+
+.fighting {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #d56723
+}
+
+.rock {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #a38c21
+}
+
+.steel{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #9eb7b8
+}
+
+.ice {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #51c4e7;
+}
+
+.ghost {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #7b62a3;
+}
+
+.psychic{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #f366b9;
+}
+
+.dragon {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+}
+
+.dark {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #707070;
+}
+
+.steel {
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #9eb7b8;
+}
+
+.unknown { 
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: rgb(65, 61, 61);
+    color: #fff
+}
+
+.shadow{
+    margin: 1em;
+    padding-top: 0.2em;
+    border-radius: 2em;
+    padding-bottom: 0.4em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+
+    background-color: #3a0449;
+    color: #fff
+}

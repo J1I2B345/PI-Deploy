@@ -1,0 +1,7 @@
+.App {
+  box-sizing: border-box;
+  text-align: center;
+  background: url(../src/img/poketown.png) no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
