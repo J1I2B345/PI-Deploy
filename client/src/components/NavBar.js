@@ -8,11 +8,12 @@ export const NavBar =() =>{
     
     
     function handleEvent(input){
-        setSearch(input.trim())
+        if (/^[a-z]*$/gi.test(input)){
+        setSearch(input.trim())}
     }
 
     function clicked(e){
-        if (search.length>3){
+        if (search.length>3 ){
         getPokemonQuery(search)
         setSearch('')}
         else {e.preventDefault(); console.log ('ingrese el nombre de un pokemon')}
