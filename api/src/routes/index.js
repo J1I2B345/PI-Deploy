@@ -70,7 +70,7 @@ router.get('/pokemons', async (req, res)=>{
             .catch (err => console.log (err.message))   
     }
     catch (e){
-       return  res.status(400).json(e)
+       return  res.status(400).json(e.message)
     }
 })
 
@@ -147,11 +147,11 @@ router.get ('/types', async (req,res) =>{
                     .then(data => data.json())
                     .then(data=> data.results)
             await Tipo.bulkCreate (types)
-            console.log('datos de la API')
+         
             return res.json (types)
         }
         else {
-            console.log('datos de la DB')
+         
             return res.json(tiposDb)
         }
     }

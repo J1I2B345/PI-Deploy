@@ -8,7 +8,7 @@ import s from './Landing.module.css';
 const Landing = () =>{
     const pokemonsGloba = useSelector(state => state.pokemons)
     const dispatch = useDispatch()
-    console.log('global de APP', pokemonsGloba)
+   
     React.useEffect (() => {
       dispatch(getAllPokemons());
       dispatch(getTypes());

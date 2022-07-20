@@ -16,7 +16,6 @@ const PokemonDetailByName = () => {
 
     
 
-    console.log(poke.name, name)
 
     useEffect (
         ()=> {

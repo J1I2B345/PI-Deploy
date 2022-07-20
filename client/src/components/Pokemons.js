@@ -29,7 +29,7 @@ const Pokemons = (props) => {
     }, [pokemonsGloba]
     )
 
-    console.log (poke)
+  
     
 
     if (loading){

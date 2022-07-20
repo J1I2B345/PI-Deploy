@@ -93,9 +93,9 @@ export const CreatePokemon = () => {
         
             let poketipos= tipo.map(e => e.id)
             let poke = {...inputs, tipos: poketipos}
-            console.log (poke)
+           
             let response = dispatch (createPokemon (poke))
-            console.log(response)
+       
 
             setError('Su pokemon ha sido creado exitosamente')           
             
