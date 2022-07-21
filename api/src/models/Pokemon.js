@@ -35,7 +35,7 @@ module.exports = (sequelize) => {
     },
     img: {
       type: DataTypes.STRING,
-      defaultValue: 'https://thumbs.gfycat.com/FairRectangularBlacklemur.webp'
+      defaultValue: 'https://w7.pngwing.com/pngs/569/963/png-transparent-pokeball-illustration-ash-ketchum-pokeball-s-image-file-formats-rim-pokemon.png'
     }
   },
   {
