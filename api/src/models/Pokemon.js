@@ -35,7 +35,7 @@ module.exports = (sequelize) => {
     },
     img: {
       type: DataTypes.STRING,
-      defaultValue: 'https://w7.pngwing.com/pngs/569/963/png-transparent-pokeball-illustration-ash-ketchum-pokeball-s-image-file-formats-rim-pokemon.png'
+      defaultValue: 'https://upload.wikimedia.org/wikipedia/commons/5/53/Pok%C3%A9_Ball_icon.svg'
     }
   },
   {
