@@ -10,6 +10,7 @@ import PokemonDetailByName from './components/PokemonDetailByName';
 
 
 
+
 function App () {
 
   return (

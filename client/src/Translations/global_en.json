@@ -1,0 +1,50 @@
+{
+    "pokemons":{
+        "all": "all",
+        "created": "created",
+        "order": "order",
+        "+a": "+attack",
+        "-a": "-attack",
+        "type": "type",
+        "noPoke": "Pokémons not found",
+        "search": "Search"
+    },
+    "nav":{
+        "home": "Home",
+        "createPokemon": "Create your own Pokémon!",
+        "placeholder": "Insert name",
+        "search": "Search"
+    },
+    "create": {
+        "createPokemon": "Create a Pokémon!",
+        "name": "Name",
+        "life": "Life",
+        "attack": "Attack",
+        "speed": "Speed",
+        "defense": "Defense",
+        "height": "Height",
+        "weight": "Weight",
+        "image": "Image",
+        "imagePlaceHolder": "Insert URL",
+        "type": "Type",
+        "typeSelect": "Select type",
+        "errorName": "Name must contain just letters",
+        "errorStats": "Value between 0 and 50",
+        "errorHeight": "Value between 0 and 20",
+        "errorWeight": "Value between 0 and 1000",
+        "create": "Create!",
+        "success": "Your Pokémon was successfully created!",
+        "errorNameExist": "There is already a Pokémon with that name",
+        "errorNameValid": "Insert a valid name",
+        "errorType": "Choose at least one type",
+        "errorMoreThanTwoTypes": "Select max two types"
+    },
+    "detail":{
+        "life": "Life",
+        "attack": "Attack",
+        "speed": "Speed",
+        "defense": "Defense",
+        "height": "Height",
+        "weight": "Weight"
+    }
+}

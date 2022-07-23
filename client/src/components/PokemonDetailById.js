@@ -4,7 +4,7 @@ import {useParams} from 'react-router-dom';
 import {getPokemon} from '../redux/actions';
 import s from './PokemonDetail.module.css';
 import img from '../img/loading-pokeball.gif';
-
+import {useTranslation} from 'react-i18next';
 
 const PokemonDetailById = (props) => {
 
@@ -12,7 +12,7 @@ const PokemonDetailById = (props) => {
     const [loading, setLoading] = useState(true)
     const poke = useSelector(state => state.pokemon)
 
-
+    const [t, i18next] = useTranslation('global')
 
     let {id} = useParams()
     const dispatch = useDispatch()
@@ -47,16 +47,16 @@ const PokemonDetailById = (props) => {
                     <div className={s.divstats1}> 
                         <div className={s.mobile1}> 
                             <p className={s.inputs}>Id: {poke.id}</p>
-                            <p className={s.inputs}>Ataque: {poke.ataque}</p>
-                            <p className={s.inputs}>Vida: {poke.vida}</p>
-                            <p className={s.inputs}>Ataque: {poke.ataque}</p>
+                            <p className={s.inputs}>{`${t("detail.attack")}`}: {poke.ataque}</p>
+                            <p className={s.inputs}>{`${t("detail.life")}`}: {poke.vida}</p>
+                            {/* <p className={s.inputs}>{`${t("detail.ataque")}`}: {poke.ataque}</p> */}
+                            <p className={s.inputs}>{`${t("detail.defense")}`}: {poke.defensa}</p>
                         </div>
                         
                         <div className={s.mobile2}>
-                            <p className={s.inputs}>Defensa: {poke.defensa}</p>
-                            <p className={s.inputs}>Velocidad: {poke.velocidad}</p>
-                            <p className={s.inputs}>Altura: {poke.altura}</p>
-                            <p className={s.inputs}>Peso: {poke.peso}</p>
+                            <p className={s.inputs}>{`${t("detail.speed")}`}: {poke.velocidad}</p>
+                            <p className={s.inputs}>{`${t("detail.height")}`}: {poke.altura}</p>
+                            <p className={s.inputs}>{`${t("detail.weight")}`}: {poke.peso}</p>
                         </div>
                     </div>
                 </div>

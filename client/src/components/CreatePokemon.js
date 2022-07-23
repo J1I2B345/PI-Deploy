@@ -1,17 +1,20 @@
+import { useTranslation } from 'react-i18next';
 import {React, useEffect, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import {getTypes, createPokemon} from '../redux/actions'
+import {createPokemon} from '../redux/actions'
 import s from './CreatePokemon.module.css'
 
 export const CreatePokemon = () => {
     const [inputs, setInputs] = useState({});
     const [tipo, setTipo] = useState([])
     const [error, setError] = useState('')
-    
+
     const pokemons = useSelector (state => state.pokemons)
     const types = useSelector(state => state.types)
 
     const dispatch = useDispatch()
+
+    const [t, i18next] = useTranslation("global")
     
 
     const handleChange = (e) => {
@@ -23,11 +26,11 @@ export const CreatePokemon = () => {
                 )
                 setError ('')
             } else {
-                setError ('Ingrese un nombre que sea solo letras')
+                setError (t("create.errorName"))
             }
         } else if (e.target.name === 'peso'){
                 if (e.target.value > 1000 || e.target.value < 0){ 
-                    setError ('Ingrese un valor entre 0 y 1000')
+                    setError (t('create.errorWeight'))
                 }
                 else {
                     setInputs(
@@ -48,7 +51,7 @@ export const CreatePokemon = () => {
                     )
                     setError ('')
                 }
-                else setError ('Ingrese un valor entre 0 y 20')
+                else setError (t("create.errorHeight"))
         } else if (e.target.name !== 'img' && e.target.name !== 'weight' && e.target.name !== 'height'){
             if (e.target.value >= 0 && e.target.value <=50){ 
                 setInputs(
@@ -58,7 +61,7 @@ export const CreatePokemon = () => {
                     })
                 )
                 setError ('')
-            } else setError ('Ingrese un valor entre 0 y 50')
+            } else setError (t("create.errorStats"))
         } else setInputs(
             prevState => ({ 
                 ...prevState, 
@@ -72,7 +75,7 @@ export const CreatePokemon = () => {
         if(tipo.length<2){
             setError('')
             setTipo([...tipo, {name: e.target.value, id: e.target.selectedOptions[0].id}])}
-        else setError('seleccione hasta dos tipos')}
+        else setError(t("create.errorMoreThanTwoTypes"))}
     }
 
     const handleClick = (e) => {
@@ -86,7 +89,7 @@ export const CreatePokemon = () => {
     const handleSubmit=  (e) => {
         e.preventDefault()
         if (pokemons.find(e=> e.name === inputs.name)){
-            setError('Ya existe un Pókemon con ese nombre')
+            setError(t("crate.errorNameExist"))
         }
         else if (tipo.length>0 && inputs.name){
 
@@ -97,7 +100,7 @@ export const CreatePokemon = () => {
             let response = dispatch (createPokemon (poke))
        
 
-            setError('Su pokemon ha sido creado exitosamente')           
+            setError(t('create.success'))           
             
             setInputs({
                         name: '',
@@ -112,12 +115,12 @@ export const CreatePokemon = () => {
             )
             setTipo([])
         } else if(!inputs.name){
-            setError ('Debe ingresar un nombre válido')
-        } else if (tipo.length<=0) setError('Seleccione al menos un tipo')
+            setError (t('create.errorNameValid'))
+        } else if (tipo.length<=0) setError(t('create.errorType'))
     }
 
     return <div className={s.container}>
-        Create your own Pokémon!
+        {t("create.createPokemon")}
         
         <form className={s.form} onSubmit={e => handleSubmit(e)}>
             
@@ -128,49 +131,49 @@ export const CreatePokemon = () => {
                 
                 <div>
                     <div className={s.divLabel}> 
-                        <label className={s.label}>Nombre  
+                        <label className={s.label}>{t("create.name")}  
                         </label>
-                        <input className={`${s.input} ${s.inputs}`} name='name' placeholder='nombre' value={inputs.name || ''} onChange={handleChange}/>
+                        <input className={`${s.input} ${s.inputs}`} name='name' placeholder={`${t("create.name")}`} value={inputs.name || ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
-                        <label className={s.label}>Vida
+                        <label className={s.label}>{t("create.life")}  
                         </label>
-                        <input className={s.input} name='vida' placeholder='vida' value={inputs.vida || ''} onChange={handleChange}/>
+                        <input className={s.input} name='vida' placeholder='0-50' value={inputs.vida || ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}>
-                        <label className={s.label}>Ataque
+                        <label className={s.label}>{t("create.attack")}
                         </label>    
-                        <input className={s.input} name= 'ataque' placeholder='ataque'value={inputs.ataque || ''} onChange={handleChange}/>
+                        <input className={s.input} name= 'ataque' placeholder='0-50' value={inputs.ataque || ''} onChange={handleChange}/>
                     </div> 
                     <div className={s.divLabel}>
-                        <label className={s.label}>Defensa
+                        <label className={s.label}>{t("create.defense")}
                         </label>
-                        <input className={s.input} name='defensa' placeholder='defensa'value={inputs.defensa|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='defensa' placeholder='0-50' value={inputs.defensa|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
-                        <label className={s.label}>Velocidad
+                        <label className={s.label}>{t("create.speed")}
                         </label>
-                        <input className={s.input} name='velocidad' placeholder='velocidad' value={inputs.velocidad|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='velocidad' placeholder='0-50' value={inputs.velocidad|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
-                        <label className={s.label}>Altura
+                        <label className={s.label}>{t("create.height")}
                         </label>
-                        <input className={s.input} name='altura' placeholder='altura' value={inputs.altura|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='altura' placeholder='0-20' value={inputs.altura|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
-                        <label className={s.label}>Peso
+                        <label className={s.label}>{t("create.weight")}
                         </label>
-                        <input className={s.input} name='peso' placeholder='peso' value={inputs.peso|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='peso' placeholder='0-1000' value={inputs.peso|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
-                        <label className={s.label}> Imagen
+                        <label className={s.label}> {t("create.image")}
                         </label>
-                        <input className={s.input} name='img' type='url' placeholder='inserte URL de la imagen' value={inputs.img|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='img' type='url' placeholder={`${t("create.imagePlaceHolder")}`} value={inputs.img|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}>
-                        <label className={s.label}> Tipo</label>
+                        <label className={s.label}> {t("create.type")}</label>
                         <select className={s.select} name='tipo' onChange={handleChangeTipo}>
-                            <option name='default' value='default'> Seleccione un tipo </option>
+                            <option name='default' value='default'> {t("create.typeSelect")} </option>
                             {types.map(e => {
                                 return <option name={e.name} key={e.id} id={e.id} value= {e.name || ''}> {`${e.name}`}</option>
                             })}
@@ -181,18 +184,11 @@ export const CreatePokemon = () => {
             
             <div className={s.divTiposSeleccionados}>     
                 {tipo.length>0? tipo.map(e=> {return <p className ={s[e.name]} name={e.name} key= {e.id} value={e.name} onClick={handleClick}> {e.name}</p>}) : ''}
-            </div>
-                   
-                   
-                        
+            </div>    
                
-             
 
-
-
-
-            <h1>{!error ? null : <span>{error}</span>} </h1>      
-            <input type='submit' value='Enviar' className={s.button}/>
+            <h2 className={s.errorContainer}>{!error ? null : <span className={s.error}>{error}</span>} </h2>      
+            <input type='submit' value={`${t('create.create')}`} className={s.button}/>
                     </form>
     </div>
 }

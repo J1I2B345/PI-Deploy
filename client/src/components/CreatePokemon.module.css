@@ -58,6 +58,12 @@
     padding: 0em;
 }
 
+
+.errorContainer{
+    font-size: 1em;
+    margin: 0px;
+}
+
 @media (max-width: 600px) {
     .img {
       display: none;

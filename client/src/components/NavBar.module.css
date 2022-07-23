@@ -16,13 +16,28 @@
     width: 100%;
     list-style: none; 
 }
-
 .li {
     margin: 1em;
     padding: 1px;
 }
 .imgPokemon{
     height: 5em;
+}
+
+.divFlag{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1em;
+}
+.flag{
+    width: 2em;
+    margin-top: 1em;
+    margin-right: 1em;
+    border-radius: 100%;
+}
+
+.flag:hover{
+    cursor:pointer;
 }
 
 @media (max-width: 600px) {

@@ -1,0 +1,53 @@
+{
+    "pokemons": {
+        "all": "todos",
+        "created": "creados",
+        "order": "orden",
+        "+a": "mayor ataque",
+        "-a": "menor ataque",
+        "type": "tipo",
+        "noPoke": "No se encontraron pokémons",
+        "search": "Buscar"
+    },
+    "nav": {
+        "home": "Inicio",
+        "createPokemon": "Crea un Pokémon!",
+        "placeholder": "Ingrese un nombre",
+        "search": "Buscar"
+    },
+    "create": {
+        "createPokemon": "Crea tu propio Pokémon!",
+        "name": "Nombre",
+        "life": "Vida",
+        "attack": "Ataque",
+        "speed": "Velocidad",
+        "defense": "Defensa",
+        "height": "Altura",
+        "weight": "Peso",
+        "image": "Imagen",
+        "imagePlaceHolder": "Inserte URL",
+        "type": "Tipos",
+        "typeSelect": "Seleccione tipos",
+        "errorName": "Ingrese un nombre que sea solo letras",
+        "errorStats": "Ingrese un valor entre 0 y 50",
+        "errorHeight": "Ingrese un valor entre 0 y 20",
+        "errorWeight": "Ingrese un valor entre 0 y 1000",
+        "create": "Crear!",
+
+        "success": "Su pokemon ha sido creado exitosamente",
+        "errorNameExist": "Ya existe un Pókemon con ese nombre",
+        "errorNameValid": "Debe ingresar un nombre válido",
+        "errorType": "Seleccione al menos un tipo",
+        "errorMoreThanTwoTypes": "Seleccione hasta dos tipos"
+
+
+    },
+    "detail": {
+        "life": "Vida",
+        "attack": "Ataque",
+        "speed": "Velocidad",
+        "defense": "Defensa",
+        "height": "Altura",
+        "weight": "Peso"
+    }
+}

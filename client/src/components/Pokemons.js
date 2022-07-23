@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-import {useDispatch, useSelector } from "react-redux";
+import {useSelector } from "react-redux";
 import Pokemon from './Pokemon';
 import Pagination from './Pagination';
-import {getAllPokemons, getPokemonsApi, getPokemonsDb} from '../redux/actions';
 import s from './Pokemons.module.css';
 import img from '../img/loading-pokeball.gif';
+import {useTranslation} from 'react-i18next';
 
 const Pokemons = (props) => {
     const [loading, setLoading]= useState(true)
@@ -12,8 +12,8 @@ const Pokemons = (props) => {
     const [currentPage, setCurrentPage] = useState (1)
     const [poke, setPoke]= useState([]) 
     const [tipoBuscado, setTipoBuscado] = useState([]) 
-    
-    // const dispatch = useDispatch()
+    const [t, i18n] = useTranslation("global")
+
     
     const pokemonsGloba = useSelector(state => state.pokemons)    
     const types = useSelector (state => state.types)
@@ -164,19 +164,19 @@ const Pokemons = (props) => {
             <div className={s.navContainer}> 
                 <nav className={`${s.nav}, ${s.tipos}`}> 
                     <select className={s.select} onChange= {(e)=> changeApiDb(e.target.value)}> 
-                        <option value={'t'}>todos</option>
+                        <option value={'t'}>{t('pokemons.all')}</option>
                         <option value={'a'}>api</option>
-                        <option value={'c'}>creados</option>
+                        <option value={'c'}>{t('pokemons.created')}</option>
                     </select>
                     <select id='selectOrder' className={s.select} onChange={(e) => changeOrder(e.target.value)}>
-                        <option value={'orden'}> orden </option>
+                        <option value={'orden'}> {t('pokemons.order')} </option>
                         <option value={'a-z'}> a-z </option>
                         <option value={'z-a'}> z-a </option>
-                        <option value={'+a'}> mayor ataque</option>
-                        <option value={'-a'}> menor ataque</option>
+                        <option value={'+a'}> {t('pokemons.+a')}</option>
+                        <option value={'-a'}> {t('pokemons.-a')}</option>
                     </select> 
                     <select id='selectType' className={s.select} onChange= {(e) => selectType(e.target.value)}> 
-                        <option value ={'tipo'}> tipo </option>
+                        <option value ={'tipo'}> {t('pokemons.type')} </option>
                                 {types.map(e => {
                                     return <option name={e.name} key={e.id} id={e.id} value= {e.name || ''}> {`${e.name}`}</option>
                                 })}
@@ -190,14 +190,12 @@ const Pokemons = (props) => {
 
             {poke.length>0? <Pagination pokesPerPage ={pokesPerPage} totalPokes={poke.length} changePage={changePage}/>
             : ''}
-            <div className={s.divPokes}> {poke.length? currentPoke.map((e, i) => {return <Pokemon name={e.name} id={e.id} key={e.id} img={e.img} ataque={e.ataque} tipos={e.tipos} i={i}/>})  : <h1> No se encontraron pokémons</h1>}
+            <div className={s.divPokes}> {poke.length? currentPoke.map((e, i) => {return <Pokemon name={e.name} id={e.id} key={e.id} img={e.img} ataque={e.ataque} tipos={e.tipos} i={i}/>})  : <h1> {t('pokemons.noPoke')}</h1>}
                 {/* {currentPoke.map(e => { return <Pokemon name={e.name} id={e.id} key={e.id} img={e.img} ataque={e.ataque} />})}  */}
-            </div>  
-             
+            </div>
         </div>
         )
-
-                            }
+    }
 
 
 }
