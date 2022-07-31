@@ -129,6 +129,7 @@
     padding-right: 0.5em;
 
     background-color: #adff2f;
+    color:#000
     
 }
 
@@ -141,6 +142,7 @@
     padding-right: 0.5em;
 
     background: linear-gradient(180deg, #3dc7ef 50%, #bdb9b8 50%);
+    color: #000;
 }
 
 .normal{
@@ -151,7 +153,8 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    background-color: #a4acaf
+    background-color: #a4acaf;
+    color: #000;
 }
 
 .ground{
@@ -163,6 +166,7 @@
     padding-right: 0.5em;
 
     background: linear-gradient(180deg, #f7de3f 50%, #ab9842 50%);
+    color: #000;
 }
 
 .electric {
@@ -175,6 +179,7 @@
   
 
     background-color: #eed535;
+    color: #000;
 }
 
 .fairy {
@@ -185,7 +190,8 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    background-color: #fdb9e9
+    background-color: #fdb9e9;
+    color: #000;
 }
 
 .fighting {
@@ -196,7 +202,8 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    background-color: #d56723
+    background-color: #d56723;
+    color: #000;
 }
 
 .rock {
@@ -207,7 +214,8 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    background-color: #a38c21
+    background-color: #a38c21;
+    color: #000;
 }
 
 .steel{
@@ -218,7 +226,8 @@
     padding-left: 0.5em;
     padding-right: 0.5em;
 
-    background-color: #9eb7b8
+    background-color: #9eb7b8;
+    color: #000;
 }
 
 .ice {
@@ -230,6 +239,7 @@
     padding-right: 0.5em;
 
     background-color: #51c4e7;
+    color: #000;
 }
 
 .ghost {
@@ -241,6 +251,7 @@
     padding-right: 0.5em;
 
     background-color: #7b62a3;
+    color: #000;
 }
 
 .psychic{
@@ -252,6 +263,7 @@
     padding-right: 0.5em;
 
     background-color: #f366b9;
+    color: #000;
 }
 
 .dragon {
@@ -263,6 +275,7 @@
     padding-right: 0.5em;
 
     background: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
+    color: #000;
 }
 
 .dark {
@@ -274,6 +287,7 @@
     padding-right: 0.5em;
 
     background-color: #707070;
+    color: #000;
 }
 
 .steel {
@@ -285,6 +299,7 @@
     padding-right: 0.5em;
 
     background-color: #9eb7b8;
+    color: #000;
 }
 
 .unknown { 
@@ -296,7 +311,7 @@
     padding-right: 0.5em;
 
     background-color: rgb(65, 61, 61);
-    color: #fff
+    color: #fff;
 }
 
 .shadow{
@@ -308,7 +323,7 @@
     padding-right: 0.5em;
 
     background-color: #3a0449;
-    color: #fff
+    color: #fff;
 }
 
 
