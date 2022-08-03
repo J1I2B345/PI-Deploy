@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
-import {useSelector } from "react-redux";
 import Pokemon from './Pokemon';
 import Pagination from './Pagination';
 import s from './Pokemons.module.css';
 import img from '../img/loading-pokeball.gif';
+import {useDispatch, useSelector } from 'react-redux';
+import {getAllPokemons, getTypes, getPokemonsApi, getPokemonsDb} from '../redux/actions';
 import {useTranslation} from 'react-i18next';
 
 const Pokemons = (props) => {
@@ -13,13 +14,22 @@ const Pokemons = (props) => {
     const [poke, setPoke]= useState([]) 
     const [tipoBuscado, setTipoBuscado] = useState([]) 
     const [t] = useTranslation("global")
-
     
-    const pokemonsGloba = useSelector(state => state.pokemons)    
+    const pokemonsGloba = useSelector(state => state.pokemons)
     const types = useSelector (state => state.types)
     const pokeApi= useSelector (state => state.pokemonsApi)
     const pokesDb= useSelector (state => state.pokemonsDb)
-    
+
+
+    const dispatch = useDispatch()
+   
+    React.useEffect (() => {
+      dispatch(getAllPokemons());
+      dispatch(getTypes());
+      dispatch(getPokemonsApi());
+      dispatch(getPokemonsDb())
+    }, []
+    )
    
     React.useEffect (() => {
         if (pokemonsGloba.length !== 0){
