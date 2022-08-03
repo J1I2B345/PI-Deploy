@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import {React, useEffect, useState} from 'react';
+import {React, useState} from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import {createPokemon} from '../redux/actions'
 import s from './CreatePokemon.module.css'
@@ -14,7 +14,7 @@ export const CreatePokemon = () => {
 
     const dispatch = useDispatch()
 
-    const [t, i18next] = useTranslation("global")
+    const [t] = useTranslation("global")
     
 
     const handleChange = (e) => {
@@ -97,7 +97,7 @@ export const CreatePokemon = () => {
             let poketipos= tipo.map(e => e.id)
             let poke = {...inputs, tipos: poketipos}
            
-            let response = dispatch (createPokemon (poke))
+            dispatch (createPokemon (poke))
        
 
             setError(t('create.success'))           
@@ -126,7 +126,7 @@ export const CreatePokemon = () => {
             
             <div className={s.input}>
                 <div>
-                    {inputs.img? <img src={inputs.img} className={s.img}/> : ''} 
+                    {inputs.img? <img src={inputs.img} className={s.img} alt='Pokémon img'/> : ''} 
                 </div>
                 
                 <div>

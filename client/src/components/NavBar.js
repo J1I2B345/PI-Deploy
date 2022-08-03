@@ -29,12 +29,12 @@ export const NavBar =() =>{
     return (
     <div>
         <div className={s.divFlag}>
-            <img className= {s.flag} src={arg} onClick={() => i18n.changeLanguage('es')}/>
-            <img className= {s.flag} src={eeuu} onClick={() => i18n.changeLanguage('en')}/>
+            <img className= {s.flag} src={arg} onClick={() => i18n.changeLanguage('es')} alt='arg flag'/>
+            <img className= {s.flag} src={eeuu} onClick={() => i18n.changeLanguage('en')} alt='US flag'/>
         </div>
      
         <div className={s.div}>
-            <img src ={img} alt='pokemon image' className={s.imgPokemon}/> 
+            <img src ={img} alt='pokemon img' className={s.imgPokemon}/> 
             <ul className={s.ul}> 
                 <NavLink to='/home'> <li className={s.li}>{t("nav.home")}</li> </NavLink> 
                 <NavLink to='/createpokemon'> <li className={s.li}>{t("nav.createPokemon")} </li> </NavLink>

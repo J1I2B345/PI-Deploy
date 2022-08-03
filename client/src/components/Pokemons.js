@@ -12,7 +12,7 @@ const Pokemons = (props) => {
     const [currentPage, setCurrentPage] = useState (1)
     const [poke, setPoke]= useState([]) 
     const [tipoBuscado, setTipoBuscado] = useState([]) 
-    const [t, i18n] = useTranslation("global")
+    const [t] = useTranslation("global")
 
     
     const pokemonsGloba = useSelector(state => state.pokemons)    
@@ -116,7 +116,7 @@ const Pokemons = (props) => {
 
         let newTipo= tipoBuscado.filter(el=> el !== type)
 
-        if (newTipo.length == 0){
+        if (newTipo.length === 0){
             setTipoBuscado(newTipo)
             setPoke(pokemonsGloba)
         } else {

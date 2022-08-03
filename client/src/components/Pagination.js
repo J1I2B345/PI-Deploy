@@ -12,7 +12,7 @@ const Pagination =({totalPokes, pokesPerPage, changePage})=>{
 
     return <nav className={s.nav}>
             <ul className={s.ul}>
-                {pageNumbers.map(e =>{return <li className={s.li} key={e} onClick={event => changePage(parseInt(e))}> <a>{e}</a> </li>})}
+                {pageNumbers.map(e =>{return <li className={s.li} key={e} onClick={event => changePage(parseInt(e))}>{e}</li>})}
             </ul>
     </nav>
 

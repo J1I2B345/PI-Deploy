@@ -12,15 +12,15 @@ const PokemonDetailById = (props) => {
     const [loading, setLoading] = useState(true)
     const poke = useSelector(state => state.pokemon)
 
-    const [t, i18next] = useTranslation('global')
+    const [t] = useTranslation('global')
 
     let {id} = useParams()
     const dispatch = useDispatch()
 
     useEffect (
         ()=> {
-         dispatch(getPokemon(id)) 
-         if (poke.id == id) setLoading(false)
+        if (poke.id === parseInt(id)) setLoading(false)
+        else dispatch(getPokemon(id)) 
         }, [poke]
     )
   

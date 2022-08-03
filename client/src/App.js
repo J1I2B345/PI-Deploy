@@ -1,6 +1,6 @@
 import './App.css';
 import React from 'react';
-import {Route, Switch} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 import {NavBar} from './components/NavBar';
 import Landing from './components/Landing'
 import Pokemons from './components/Pokemons';

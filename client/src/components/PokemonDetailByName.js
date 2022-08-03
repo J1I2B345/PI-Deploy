@@ -15,12 +15,12 @@ const PokemonDetailByName = () => {
     const name = query.get('name')
     const dispatch = useDispatch()
 
-    const [t, i18next] = useTranslation ('global')
+    const [t] = useTranslation ('global')
 
     useEffect (
         ()=> {
         dispatch(getPokemonQuery(name))
-        if (poke.name == name || poke.error) {
+        if (poke.name === name || poke.error) {
             setLoading(false)
         } else setLoading(true)
         }, [poke]
