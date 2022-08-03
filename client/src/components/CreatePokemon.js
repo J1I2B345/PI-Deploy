@@ -36,7 +36,7 @@ export const CreatePokemon = () => {
                     setInputs(
                         prevState => ({ 
                             ...prevState, 
-                            [e.target.name]: e.target.value }
+                            [e.target.name]: Math.floor(e.target.value) }
                         )
                     )
                     setError ('')
@@ -46,7 +46,7 @@ export const CreatePokemon = () => {
                     setInputs(
                         prevState => ({ 
                             ...prevState, 
-                            [e.target.name]: e.target.value }
+                            [e.target.name]: Math.floor(e.target.value) }
                         )
                     )
                     setError ('')
@@ -57,7 +57,7 @@ export const CreatePokemon = () => {
                 setInputs(
                     prevState => ({ 
                         ...prevState, 
-                        [e.target.name]: e.target.value 
+                        [e.target.name]: Math.floor(e.target.value) 
                     })
                 )
                 setError ('')
@@ -65,7 +65,7 @@ export const CreatePokemon = () => {
         } else setInputs(
             prevState => ({ 
                 ...prevState, 
-                [e.target.name]: e.target.value 
+                [e.target.name]: Math.floor(e.target.value) 
             })
         )
     }
@@ -89,7 +89,7 @@ export const CreatePokemon = () => {
     const handleSubmit=  (e) => {
         e.preventDefault()
         if (pokemons.find(e=> e.name === inputs.name)){
-            setError(t("crate.errorNameExist"))
+            setError(t("create.errorNameExist"))
         }
         else if (tipo.length>0 && inputs.name){
 
