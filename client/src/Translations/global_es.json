@@ -29,9 +29,9 @@
         "type": "Tipos",
         "typeSelect": "Seleccione tipos",
         "errorName": "Ingrese un nombre que sea solo letras",
-        "errorStats": "Ingrese un valor entre 0 y 50",
-        "errorHeight": "Ingrese un valor entre 0 y 20",
-        "errorWeight": "Ingrese un valor entre 0 y 1000",
+        "errorStats": "Ingrese un valor entre 1 y 50",
+        "errorHeight": "Ingrese un valor entre 1 y 20",
+        "errorWeight": "Ingrese un valor entre 1 y 1000",
         "create": "Crear!",
 
         "success": "Su pokemon ha sido creado exitosamente",

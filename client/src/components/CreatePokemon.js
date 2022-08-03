@@ -36,7 +36,7 @@ export const CreatePokemon = () => {
                     setInputs(
                         prevState => ({ 
                             ...prevState, 
-                            [e.target.name]: e.target.value ===0 ? e.target.value : Math.floor(e.target.value)}
+                            [e.target.name]: Math.floor(e.target.value)}
                         )
                     )
                     setError ('')
@@ -46,7 +46,7 @@ export const CreatePokemon = () => {
                     setInputs(
                         prevState => ({ 
                             ...prevState, 
-                            [e.target.name]: e.target.value ===0 ? e.target.value : Math.floor(e.target.value) }
+                            [e.target.name]: Math.floor(e.target.value) }
                         )
                     )
                     setError ('')
@@ -57,7 +57,7 @@ export const CreatePokemon = () => {
                 setInputs(
                     prevState => ({ 
                         ...prevState, 
-                        [e.target.name]: e.target.value ===0 ? e.target.value : Math.floor(e.target.value)
+                        [e.target.name]: Math.floor(e.target.value)
                     })
                 )
                 setError ('')
@@ -138,32 +138,32 @@ export const CreatePokemon = () => {
                     <div className={s.divLabel}> 
                         <label className={s.label}>{t("create.life")}  
                         </label>
-                        <input className={s.input} name='vida' placeholder='0-50' value={inputs.vida || ''} onChange={handleChange}/>
+                        <input className={s.input} name='vida' placeholder='1-50' value={inputs.vida || ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}>
                         <label className={s.label}>{t("create.attack")}
                         </label>    
-                        <input className={s.input} name= 'ataque' placeholder='0-50' value={inputs.ataque || ''} onChange={handleChange}/>
+                        <input className={s.input} name= 'ataque' placeholder='1-50' value={inputs.ataque || ''} onChange={handleChange}/>
                     </div> 
                     <div className={s.divLabel}>
                         <label className={s.label}>{t("create.defense")}
                         </label>
-                        <input className={s.input} name='defensa' placeholder='0-50' value={inputs.defensa|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='defensa' placeholder='1-50' value={inputs.defensa|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
                         <label className={s.label}>{t("create.speed")}
                         </label>
-                        <input className={s.input} name='velocidad' placeholder='0-50' value={inputs.velocidad|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='velocidad' placeholder='1-50' value={inputs.velocidad|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
                         <label className={s.label}>{t("create.height")}
                         </label>
-                        <input className={s.input} name='altura' placeholder='0-20' value={inputs.altura|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='altura' placeholder='1-20' value={inputs.altura|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
                         <label className={s.label}>{t("create.weight")}
                         </label>
-                        <input className={s.input} name='peso' placeholder='0-1000' value={inputs.peso|| ''} onChange={handleChange}/>
+                        <input className={s.input} name='peso' placeholder='1-1000' value={inputs.peso|| ''} onChange={handleChange}/>
                     </div>
                     <div className={s.divLabel}> 
                         <label className={s.label}> {t("create.image")}
