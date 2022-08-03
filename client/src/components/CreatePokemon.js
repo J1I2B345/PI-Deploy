@@ -36,7 +36,7 @@ export const CreatePokemon = () => {
                     setInputs(
                         prevState => ({ 
                             ...prevState, 
-                            [e.target.name]: Math.floor(e.target.value) }
+                            [e.target.name]: e.target.value ===0 ? e.target.value : Math.floor(e.target.value)}
                         )
                     )
                     setError ('')
@@ -46,7 +46,7 @@ export const CreatePokemon = () => {
                     setInputs(
                         prevState => ({ 
                             ...prevState, 
-                            [e.target.name]: Math.floor(e.target.value) }
+                            [e.target.name]: e.target.value ===0 ? e.target.value : Math.floor(e.target.value) }
                         )
                     )
                     setError ('')
@@ -57,7 +57,7 @@ export const CreatePokemon = () => {
                 setInputs(
                     prevState => ({ 
                         ...prevState, 
-                        [e.target.name]: Math.floor(e.target.value) 
+                        [e.target.name]: e.target.value ===0 ? e.target.value : Math.floor(e.target.value)
                     })
                 )
                 setError ('')
@@ -65,7 +65,7 @@ export const CreatePokemon = () => {
         } else setInputs(
             prevState => ({ 
                 ...prevState, 
-                [e.target.name]: Math.floor(e.target.value) 
+                [e.target.name]: e.target.value 
             })
         )
     }
