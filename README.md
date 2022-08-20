@@ -1,6 +1,8 @@
 # Henry
 
 # POKEMON PI
+![pokemon](https://user-images.githubusercontent.com/103390530/185762057-2273e910-72c0-477d-9cb0-6636ebf26caf.png)
+
 
 ## Introduction
 
@@ -70,7 +72,18 @@ You have to replace `postgresuser` and `postgrespassword` with your own credenti
 # Project Screens
 
 - Landing-Page
-- Catalogue with pokemons
-- Filter the Pokemons
+![LandingPI](https://user-images.githubusercontent.com/103390530/185762085-12e5f44b-6d9b-4c3f-9030-54ed50219197.png)
+
+- Loading gif
+![LoadingPIPokemon](https://user-images.githubusercontent.com/103390530/185762133-5283a35f-bfd4-4ad5-8a57-5320f3787d04.png)
+- Catalogue with Pokémons
+![HomePIPokemon](https://user-images.githubusercontent.com/103390530/185762144-e72ed078-e8fa-47a6-8643-b58fae18d378.png)
+- Filter the Pokémons
+![FilterPIPokemon](https://user-images.githubusercontent.com/103390530/185762186-4f12dcb7-d604-4452-8c47-b1076496931c.png)
 - Pokemon in detail
+![PokemonDetailPIPokemon](https://user-images.githubusercontent.com/103390530/185762195-e1673b0a-9be6-425f-b2e9-58df74029f0e.png)
 - Create a Pokémon!
+![CreatePokemonPIPokemon](https://user-images.githubusercontent.com/103390530/185762241-203c24c3-b474-446e-8124-b0a0c008e0fe.png)
+- Change language
+![changeLanguagePIPokemon](https://user-images.githubusercontent.com/103390530/185762257-22f8eb1e-54f8-403d-a0a6-69cb77955ed0.png)
+
