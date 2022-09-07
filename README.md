@@ -19,9 +19,12 @@ This is a project done as a first assigment in wich join all the technologies le
 
 HTML, CSS, Javascript, React, Redux
 
+https://pi-deploy.vercel.app/home
+
 ### Back End:
 
 Node.js, Express, Sequelize.
+https://pokemon-pi-henry-v1.herokuapp.com/
 
 ### Database:
 
