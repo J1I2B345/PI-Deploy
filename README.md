@@ -24,6 +24,7 @@ https://pi-deploy.vercel.app/home
 ### Back End:
 
 Node.js, Express, Sequelize.
+
 https://pokemon-pi-henry-v1.herokuapp.com/
 
 ### Database:
