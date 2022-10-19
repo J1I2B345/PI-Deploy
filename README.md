@@ -19,7 +19,7 @@ This is a project done as a first assigment in wich join all the technologies le
 
 HTML, CSS, Javascript, React, Redux
 
-https://pi-deploy.vercel.app/home
+https://pi-deploy.vercel.app/
 
 ### Back End:
 
